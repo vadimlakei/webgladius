@@ -1,0 +1,618 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Webgladius</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--
+  *подключение социальных кнопок
+  !-->
+  <!-- -------------------------------------!-->
+
+
+
+  <!-- -------------------------------------!-->
+
+<!--
+  <!-- Optional - Adds useful class to manipulate icon font display and social color style
+  <link rel="stylesheet" href="path/to/pe-icon-social/css/helper.css">
+  <link rel="stylesheet" href="path/to/pe-icon-social/css/social-style.css">
+-->
+
+  <link href="css/bootstrap-social.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+    }
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+      /*Цвет футера*/
+    footer{
+      background-color:#3e8b99;
+    }
+
+    .jumbotron {
+      background-color: #3e8b99;                 /*#f4511e*/
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+    .container-fluid {
+      padding: 60px 50px;
+    }
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+    .logo-small {
+      color: #14b2ce;          /*#f4511e*/
+      font-size: 50px;
+    }
+    .logo {
+      color: #14b2ce;         /*#f4511e*/
+      font-size: 200px;
+    }
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+    }
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+    }
+    .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #14b2ce;               /*#f4511e*/
+    }
+    .carousel-indicators li {
+      border-color: #14b2ce;
+    }
+    .carousel-indicators li.active {
+      background-color: #14b2ce;            /*#f4511e*/
+    }
+    .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+    }
+    .item span {
+      font-style: normal;
+    }
+    .panel {
+      border: 1px solid #14b2ce;                /*#f4511e*/
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+    }
+    .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    }
+    .panel-footer .btn:hover {
+      border: 1px solid #14b2ce;                /*#f4511e*/
+      background-color: #fff !important;
+      color: #14b2ce;                           /*#f4511e*/
+    }
+    .panel-heading {
+      color: #fff !important;
+      background-color: #14b2ce !important;       /*#f4511e*/
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    .panel-footer {
+      background-color: white !important;
+    }
+    .panel-footer h3 {
+      font-size: 32px;
+    }
+    .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+    }
+    .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #14b2ce;                            /*#f4511e*/
+      color: #fff;
+    }
+    .navbar {
+      margin-bottom: 0;
+      background-color: #3e8b99;        /*#f4511e;*/
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+    }
+    .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;                   /* #fff*/
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #fff !important;                            /*  #f4511e  */
+      background-color: #14b2ce !important;        /*#fff*/
+    }
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #14b2ce !important;   /*#fff*/
+    }
+    footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #fff;         /*#f4511e*/
+    }
+
+    .footer-title {
+      color:#fff;
+    }
+
+    .footer-text{
+      color:#fff;
+    }
+
+    /*Социальные кнопки*/
+
+    .soc_btn_grey {
+      border: 1px solid #fff;
+      color: #818181;
+      background-color: transparent;
+      width: 30px;
+      height: 30px;
+    }
+
+
+
+/*цвет футера*/
+  .container-fluid {
+    color:;
+  }
+
+    .slideanim {visibility:hidden;}
+    .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+    }
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+      .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .logo {
+        font-size: 150px;
+      }
+    }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">Webgladius</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">О НАС</a></li>
+        <li><a href="#services">КАК МЫ ПОМОЖЕМ ВАМ</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#pricing">ПРЕЙСКУРАНТ</a></li>
+        <li><a href="#contact">КОНТАКТЫ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Webgladius</h1>
+  <p>Мы делаем Вас известными!</p>
+  
+  <!--
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      
+          <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Подписаться.</button>
+      </div>
+      
+    </div>
+  </form>
+  !-->
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Мы расскажем о вас миру</h2><br>
+      <h4>Опытная команда авторов креативно подойдёт к вопросам актуализации контента для вашего ресурса. Благодаря нам ваши продажи существенно возрастут, а количество постоянных клиентов станет рекордным.</h4><br>
+      <p>Наши клиенты достойны успеха и мы его воплотим в жизнь максимально быстро. Никаких компромиссных решений, только нестандартный подход даже в самых рутинных случаях.
+      Мы отлично понимаем клиента, который хочет с минимальными затратами времени и финансов получить результат. И не банальный выход в ТОП поисковой выдачи, а реальную посещаемость и увеличения продаж. И мы готовы предложить решения, для реализации этих задач.
+</p>
+      <br><button class="btn btn-default btn-lg">Узнать подробнее</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Наши ценности</h2><br>
+        <h4><strong>Миссия:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </h4><br>
+      <p><strong>Видиние:</strong> Клиент прав, но лишь там, где он специалист, остальное наши заботы. Методы и концепции уникальны и являются нашим достоянием.
+      Решение проблем стоит денег. Креативность и талант должны достойно оплачиваться. Все силы и ресурсы на достижение итоговой цели – узнаваемость бренда и максимальный охват представителей целевой аудитории.
+</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>НАШ СЕРВИС</h2>
+  <h4>Что мы можем Вам предложить:</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>СИЛА</h4>
+      <p>Мы готовы создавать контент, который поражает потенциального клиента, полностью занимает всё его сознание, не даёт возможности переключиться на что-либо другое. С нами вы сможете успешно продавать любой продукт.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>ИЗВРАЩЕНЦЫ</h4>
+      <p>Мы никогда не отступаем перед трудностями, любая задача решаема, нет «сложных» проектов. Просто нужно выйти за рамки шаблонного мышления, и мы всегда готовы на это. Креативная подача гарантирует даже самой рутинной компании успех.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>Зделанная работа</h4>
+      <p>Наши специалисты мастера своего дела, команда энтузиастов, работающих в сфере копирайтинга и рекламы не первый год. Каждый имеет по несколько высших образований, все вместе мы увлекаемся психологией, технологиями НЛП, искусством PR. </p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>Искусство быть первым</h4>
+      <p>Мы гарантируем клиентам известность и популярность. Наши тексты не только грамматически правильны и достоверны, они составлены с учётом психологических особенностей аудитории, а значит эффективнее, чем у конкурентов.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>Вы достойны успеха</h4>
+      <p>Наши специалисты прошли путь от офисных сотрудников, до исполнителей входящих в ТОП на самых популярных биржах фриланса. Только премиум копирайтинг и web разработка на собственных CMS площадках. Клиент достоин только лучшего!</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">Результат оправдает всё</h4>
+      <p>Для реализации поставленной цели мы готовы на всё, наши журналисты готовы для большей достоверности контента с головой внедряться в рекламируемую сферу. Мы предлагаем лишь те методы, которые работают на практике и дают результат.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+  <h4>Что мы уже сделали</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/pic1a.jpg" alt="Fack!">
+        <p><strong>Лаконичный</strong></p>
+        <p>Заказчик должен быть доволен!</p>
+      </div>
+    </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/pic1a.jpg" alt="Класс!">
+          <p><strong>Деловой</strong></p>
+          <p>Он счастлив!</p>
+        </div>
+      </div>
+     <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/pic1a.jpg" alt="Колоритная">
+        <p><strong>Кудесница!</strong></p>
+        <p>Ребята шарят в роке-н-ролле!</p>
+      </div>
+    </div>
+  </div><br>
+
+  <h2>Философские сказания великих!</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>«VITIOSUM EST UBIQUE, QUOD NIMIUM EST» – лишнее вредно (лат)<br><span>Мы создаём контент без лишних завитушек, простой, понятный, цепляющий</span></h4>
+      </div>
+      <div class="item">
+        <h4>«ACTA PROBANT SE IPSA» - дела говорят сами за себя (лат)<br><span>Наши клиенты получают славу и высокие прибыли, основа их благополучия -  наши усилия.</span></h4>
+      </div>
+      <div class="item">
+        <h4>«VENI, VIDI, VICI» - пришёл, увидел, победил (лат)<br><span>Мы не размениваемся на пустяки, клиент, приходя к нам, гарантированно получает позитивный результат в любой сфере (как web разработке, так и наполнению контентом).</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Цены, которые мы будем драть с людей -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Прейскурант</h2>
+    <h4>Станьте известны уже завтра!</h4>
+  </div>
+
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Копирайтинг</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong><br></strong> Создание «цепляющего», продающего контента на любые тематики. Даже самая обыденная тема или услуга будет раскрыта увлекательно и непредсказуемо, привлечёт внимание читателя. Слово, это сильнее оружие и мы умеем им пользоваться.</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>40 грн/1000 зн.</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Заказать</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Создание сайта</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong><br></strong> Полный цикл разработки, от уникального дизайна и до готового решения, размещённого на хостинге и наполненного контентом. Только передовые технологии, максимальная оптимизация и обратная совместимость с устаревшими устройствами.<br><br></p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>3500 грн </h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Заказать</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Landing-page</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong><br></strong>Дизайнеры воплотят любую, даже самую безумную идею клиента, а программисты оптимально решат вопросы по функционалу. Оперативная ликвидация трудностей, постоянное улучшение работоспособности продукта, полный цикл поддержки.</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>5000 грн </h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Заказать</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">Заказать</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Напишите нам и в течении 2 часов мы ответим Вам.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> г. Херсон, Украина</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +380669112971</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> vadimlakei@gmail.com</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> szerszenserhij@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- КАРТА -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+  function myMap() {
+    var myCenter = new google.maps.LatLng(46.633162, 32.606912);
+    var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFpRg3SSvG4NRSswa0g6iFBY7e3UbqNy4&callback=myMap"></script>
+
+
+
+<!-- Футер! !-->
+
+<footer class="container-fluid text-center">
+      <a href="#myPage" title="Вверх">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+       <p class="footer-text">Интернет агенство: <a class="footer-title" href="#" title="Webgladius">Webgladius</a></p>
+
+
+        <!--! Експеременты  с социальными кнопками-->
+
+
+
+        <!-- ----------------------------------!-->
+
+  <!--
+          <button class="btn-social">
+            <i class="btn-facebook"></i>
+          </button>
+
+
+          <button class="soc_btn_grey">
+            <i class="fa fa-facebook"></i>
+          </button>
+
+  <!--
+        <a class="btn btn-social-icon btn-twitter">
+          <span class="fa fa-twitter"></span>
+        </a>
+
+        <!--
+        <a class="btn btn-social-icon btn-vk">
+          <span class="fa fa-vk"></span>
+        </a>
+        !-->
+
+
+
+</footer>
+
+<script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+
+    $(window).scroll(function() {
+      $(".slideanim").each(function(){
+        var pos = $(this).offset().top;
+
+        var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+      });
+    });
+  })
+</script>
+
+</body>
+</html>
